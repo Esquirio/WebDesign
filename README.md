@@ -1,3 +1,3 @@
 # WebDesign
 Files of the course from Traversy Media.
-Link of playlist: https://www.youtube.com/playlist?list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU
+His channel on YouTube: https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA
