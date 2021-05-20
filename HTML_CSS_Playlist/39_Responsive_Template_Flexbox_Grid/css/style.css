@@ -199,8 +199,9 @@ img {
     width:50%;
     padding:10px 0;
     border:0;
-    background:#222;
+    background:#56a79a;
     color:#fff;
+    font-size: 1.2rem;
 }
 
 .contact form label{
