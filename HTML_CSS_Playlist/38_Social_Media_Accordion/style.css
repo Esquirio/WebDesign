@@ -171,9 +171,13 @@ header h1 {
     .tab .content {
         width: 85%;
     }
-    
-    .tab:hover {
-        width: 100%;
+
+    .tab .social a::before {
+        margin-left: -100px;
+    }
+  
+    .tab .social a::after {
+        margin-left: -5px;
     }
 }
 
