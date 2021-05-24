@@ -121,3 +121,15 @@ body {
     background: url('https://source.unsplash.com/ggZuL3BTSJU/1600x900') no-repeat
       center center/cover;
 }
+
+@media (max-width: 500px) {
+    .slide .content {
+      bottom: -300px;
+      left: 0;
+      width: 100%;
+    }
+  
+    .slide.current .content {
+      transform: translateY(-300px);
+    }
+}
