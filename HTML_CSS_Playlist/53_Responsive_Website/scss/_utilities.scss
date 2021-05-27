@@ -1,0 +1,256 @@
+$primary-color: #047aed;
+$secondary-color: #1c3fa8;
+$dark-color: #002240;
+$light-color: #f4f4f4;
+$success-color: #5cb85c;
+$error-color: #d9534f;
+$textColor: #fff;
+$bg-white: #fff;
+$text-dark: #333;
+
+// Utilities
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: $primary-color;
+    color: $textColor;
+    border: none;
+    border-radius: 5px;
+
+    &-outline {
+        background-color: transparent;
+        border: 1px $textColor solid;
+    }
+
+    &:hover {
+        transform: scale(0.98);
+    }
+}
+
+.card {
+    background-color: $bg-white;
+    color: $text-dark;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Tabelts and under
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+/* Text colors */
+.text {
+    &-center{
+        text-align: center;
+    }
+
+    &-primary {
+        color: $primary-color !important;
+    }
+
+    &-secondary {
+        color: $secondary-color !important;
+    }
+
+    &-dark {
+        color: $dark-color !important;
+    }
+
+    &-light {
+        color: $light-color !important;
+    }
+}
+
+/* Text sizes */
+.lead {
+    font-size: 20px;
+  }
+  
+  .sm {
+    font-size: 1rem;
+  }
+  
+  .md {
+    font-size: 2rem;
+  }
+  
+  .lg {
+    font-size: 3rem;
+  }
+  
+  .xl {
+    font-size: 4rem;
+  }
+
+/* Alert */
+.alert {
+    background-color: $light-color;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    & i {
+        margin-right: 10px;
+    }
+    
+    &-success {
+        background-color: $success-color;
+        color: #fff;
+    }
+    
+    &-error {
+        background-color: $error-color;
+        color: #fff;
+    }
+}
+  
+  
+
+/* Backgrounds & colored buttons */
+.bg {
+    &-primary {
+        background-color: $primary-color;
+        color: $textColor;
+        a {
+            color: $textColor;
+        }
+    }
+
+    &-secondary {
+        background-color: $secondary-color;
+        color: $textColor;
+        a {
+            color: $textColor;
+        }
+    }
+
+    &-dark {
+        background-color: $dark-color;
+        color: $textColor;
+        a {
+            color: $textColor;
+        }
+    }
+
+    &-light {
+        background-color: $light-color;
+        color: $text-dark;
+        a {
+            color: $text-dark;
+        }
+    }
+}
+
+.btn {
+    &-primary {
+        background-color: $primary-color;
+        color: $textColor;
+        a {
+            color: $textColor;
+        }
+    }
+
+    &-secondary {
+        background-color: $secondary-color;
+        color: $textColor;
+        a {
+            color: $textColor;
+        }
+    }
+
+    &-dark {
+        background-color: $dark-color;
+        color: $textColor;
+        a {
+            color: $textColor;
+        }
+    }
+
+    &-light {
+        background-color: $light-color;
+        color: $text-dark;
+        a {
+            color: $text-dark;
+        }
+    }
+}
+
+// Margin and padding classes
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+    .mx-#{$space} {
+        margin: 0 #{$space}rem;
+    }
+    .mt-#{$space} {
+        margin: #{$space}rem 0 0 0;
+    } 
+    .mb-#{$space} {
+        margin: 0 0 #{$space}rem 0;
+    }
+    .mr-#{$space} {
+        margin: 0 #{$space}rem 0 0;
+    }
+    .ml-#{$space} {
+        margin: 0 0 0 #{$space}rem;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+    .px-#{$space} {
+        padding: 0 #{$space}rem;
+    }
+    .pt-#{$space} {
+        padding: #{$space}rem 0 0 0;
+    }
+    .pb-#{$space} {
+        padding: 0 0 #{$space}rem 0;
+    }
+    .pr-#{$space} {
+        padding: 0 #{$space}rem 0 0;
+    }
+    .pl-#{$space} {
+        padding: 0 0 0 #{$space}rem;
+    }
+}
