@@ -20,5 +20,5 @@
 }
 
 .lattes a:before {
-    content: url('images/lattes_white_30px.png');
+	filter: invert(1);
 }

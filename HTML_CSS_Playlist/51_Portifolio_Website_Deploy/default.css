@@ -563,9 +563,14 @@ hr {
         border-bottom: 3px #333 solid;
     }
 
+    .tab:hover {
+        width: 100%;
+    }
+
     .accordion-container {
         width: 90%;
         margin-left: 10px;
+        margin-left: 0px;
     }
 
     .disable{
