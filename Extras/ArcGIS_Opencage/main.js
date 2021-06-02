@@ -15,7 +15,7 @@ if (!key || key === 'null') {
 var API_KEY = localStorage.getItem('OPENCAGE_API_KEY');
 if (!API_KEY || API_KEY === 'null') {
   // Test key always returns "Friedrich-Ebert-Straße 7, 48153 Münster, Germany"
-  API_KEY = '6d0e711d72d74daeb2b0bfd2a5cdfdba';
+  API_KEY = 'b871511f1b1c492a81d7e979d98fe512';
 }
 
 require([
