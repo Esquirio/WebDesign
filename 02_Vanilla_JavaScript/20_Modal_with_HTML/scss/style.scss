@@ -1,0 +1,103 @@
+$modal-duration: 1s;
+$modal-color: #428bca;
+$bg-light: #f4f4f4;
+$bg-primary: #3876ac;
+$bg-white: #fff;
+$text-white: #fff;
+$text-primary: #ccc;
+$text-black: #000;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: $bg-light;
+    font-size: 17px;
+    line-height: 1.6;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background: $modal-color;
+    padding: 1em 2em;
+    color: $text-white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background: $bg-primary;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+
+    &-content {
+        margin: 10% auto;
+        width: 60%;
+        box-shadow: 0 5px 8px 0 rgba($color: #000000, $alpha: 0.2), 0 7px 20px 0 rgba($color: #000000, $alpha: 0.17);
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: modalopen $modal-duration;
+    }
+
+    &-header {
+        background: $modal-color;
+        padding: 15px;
+        color: $text-white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &-footer {
+        background: $modal-color;
+        padding: 10px;
+        color: $text-white;
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        h3 {
+            margin: 0;
+        }
+    }
+
+    &-body {
+        padding: 10px 20px;
+        background: $bg-white;        
+    }
+}
+
+.close {
+    color: $text-primary;
+    float: right;
+    font-size: 30px;
+    // color: $text-white;
+
+    &:hover,
+    &:focus {
+        color: $text-black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
