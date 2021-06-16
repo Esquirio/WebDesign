@@ -1,2 +1,2 @@
 Redux For Beginners | React Redux Tutorial - Dev Ed
-https://www.youtube.com/watch?v=CVpUuw9XSjY&t=2s
+https://www.youtube.com/watch?v=CVpUuw9XSjY
