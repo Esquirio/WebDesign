@@ -15,6 +15,7 @@ function App() {
     const increment = () => {
         setCount(count + 1);
         setRed(!isRed);
+        setUsers(users);
     };
 
     return (
