@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ItemDetail({ match }) {
+function ItemDetails({ match }) {
     const [item, setItem] = useState({});
 
     useEffect(() => {
@@ -52,4 +52,4 @@ function ItemDetail({ match }) {
     );
 }
 
-export default ItemDetail;
+export default ItemDetails;
