@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook Login JavaScript Example</title>
+        <link rel="shorcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '525792708553033',
+                    autoLogAppEvents: true,
+                    xfbml: true, // Parse social plugins on this webpage.
+                    version: 'v11.0', // Use this Graph API version for this call.
+                });
+
+                var finished_rendering = function () {
+                    console.log('finished rendering plugins');
+                    var spinner = document.getElementById('spinner');
+                    spinner.removeAttribute('style');
+                    spinner.removeChild(spinner.childNodes[0]);
+                };
+                FB.Event.subscribe('xfbml.render', finished_rendering);
+            };
+
+            (function (d) {
+                var js,
+                    id = 'facebook-jssdk';
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement('script');
+                js.id = id;
+                js.async = true;
+                js.src = 'https://connect.facebook.net/pt_BR/all.js';
+                d.getElementsByTagName('head')[0].appendChild(js);
+            })(document);
+        </script>
+
+        <div
+            id="spinner"
+            style="
+                background: #4267b2;
+                border-radius: 5px;
+                color: white;
+                height: 40px;
+                text-align: center;
+                width: 250px;
+            "
+        >
+            Loading
+            <div
+                class="fb-login-button"
+                data-max-rows="1"
+                data-size="large"
+                data-button-type="continue_with"
+                data-use-continue-as="true"
+            ></div>
+        </div>
+
+        <div id="spinner">
+            <button class="loginBtn loginBtn--facebook">
+                Login with Facebook
+            </button>
+        </div>
+
+        <!-- <script
+            async
+            defer
+            crossorigin="anonymous"
+            src="https://connect.facebook.net/pt_BR/sdk.js"
+        ></script> -->
+    </body>
+</html>
