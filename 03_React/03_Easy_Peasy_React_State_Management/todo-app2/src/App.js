@@ -8,14 +8,14 @@ import './App.css';
 const store = createStore(model);
 
 function App() {
-  return (
-    <StoreProvider store={store}>
-      <div className="container">
-        <Todos />
-        <AddTodo />
-      </div>
-      </StoreProvider>
-  );
+    return (
+        <StoreProvider store={store}>
+            <div className="container">
+                <Todos />
+                <AddTodo />
+            </div>
+        </StoreProvider>
+    );
 }
 
 export default App;
