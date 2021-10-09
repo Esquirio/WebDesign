@@ -50,7 +50,7 @@ export default class Facebook extends Component {
             fbContent = (
                 <React.Fragment>
                     <FacebookLogin
-                        appId="525792708553033"
+                        appId="3138465706421921"
                         autoLoad={false}
                         fields="name,email,picture"
                         cssClass="facebook"
